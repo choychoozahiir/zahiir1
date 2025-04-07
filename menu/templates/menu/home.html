@@ -5,7 +5,7 @@
     <head>
         <link rel="stylesheet" type="text/css" href="{% static 'menu/style.css' %}">
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device.width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Homepage</title>
     </head>
     <body>
@@ -13,14 +13,28 @@
         <img src="{% static 'menu/alps.jpg' %}" alt="Homepage Image" width="600" height="400">
 
         <h2>List of Students</h2>
-        <ul>
-            {% for stud in students %}
-            <li> {{ stud.fname }} - {{ stud.lname }} - {{ stud.email }}</li>
-        {% empty %}
-            <li>No Student; table is empty</li>
-        {% endfor %}
-        </ul>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for stud in students %}
+                <tr>
+                    <td>{{ stud.fname }}</td>
+                    <td>{{ stud.lname }}</td>
+                    <td>{{ stud.email }}</td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="3">No Student; table is empty</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
 
     </body>
-
 </html>
