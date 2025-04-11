@@ -1,17 +1,22 @@
 h1{
     color : #000000;
-    font-size:30px;
+    font-size:50px;
     text-align: center;
 }
 
+img{
+    margin:auto;
+}
+
 body{
-    background-image: linear-gradient(to right, #FEFEFE, #5ea4f0);
+    background-image: linear-gradient(to right, #FEFEFE, #4199ff);
 }
 
 table {
-    width: 100%;
+    width: 55%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin:auto;
+
 }
 
 th, td {
@@ -21,14 +26,14 @@ th, td {
 }
 
 th {
-    background-color: #4CAF50; /* Green background for header */
+    background-color: #000000; /* Green background for header */
     color: white; /* White text for header */
 }
 
-tr:nth-child(even) {
-    background-color: #f2f2f2; /* Light grey background for even rows */
+tr {
+    background-color: #b8b8b8; /* Light grey background for even rows */
 }
 
 tr:hover {
-    background-color: #ddd; /* Light grey background on hover */
+    background-color: #85a5ff; /* Light grey background on hover */
 }
