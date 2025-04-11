@@ -3,17 +3,50 @@
 
 <html lang="en">
     <head>
-        <link rel="stylesheet" type="text/css" href="{% static 'menu/FormStyle.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'menu/Style.css' %}">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Homepage</title>
+        <script>
+
+            function HideTable() {
+                var table = document.getElementById("studentTable");
+                table.style.display = "none"; // Hide the table
+            }
+
+            function ShowTable() {
+                var table = document.getElementById("studentTable");
+                table.style.display = "table"; // Show the table
+            }
+
+            function ShowImage() {
+                var img = document.getElementById("alps");
+                img.style.display = "block"; // Show the image
+            }
+            function HideImage() {
+                var img = document.getElementById("alps");
+                img.style.display = "none"; // Hide the image
+            }
+        </script>
     </head>
     <body>
         <h1>Welcome to our Homepage</h1>
-        <img src="{% static 'menu/alps.jpg' %}" alt="Homepage Image" width="600" height="400">
 
-        <h2>List of Students</h2>
-        <table border="1">
+        <div class="container" >
+            <button onclick="ShowTable()">Show Student List</button>
+            <button onclick="HideTable()">Hide Student List</button>
+            <button onclick="ShowImage()">Show Image</button>
+            <button onclick="HideImage()">Hide Image</button>
+        </div>
+        
+        <img id="alps" src="{% static 'menu/alps.jpg' %}" alt="Homepage Image" width="600" height="400">
+
+
+<br><br>
+
+
+    
+        <table id="studentTable" border="1">
             <thead>
                 <tr>
                     <th>First Name</th>
